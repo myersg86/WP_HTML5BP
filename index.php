@@ -14,6 +14,8 @@
 
             <?php endwhile; else: ?>
 
+            <?php the_posts_navigation(); ?>
+            
 			<p><?php _e( 'Sorry, no posts.' ); ?></p>
 
 		<?php endif; ?>
