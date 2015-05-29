@@ -19,10 +19,6 @@ remove_action( 'admin_print_scripts','print_emoji_detection_script');
 
 function wpt_theme_styles() {
     
-    wp_enqueue_style( 'normalize_min_css', get_template_directory_uri() . '/css/normalize.min.css' );
-
-    wp_enqueue_style( 'html5bp_css', get_template_directory_uri() . '/css/main.css' );
-    
     wp_enqueue_style( 'main_css', get_template_directory_uri() . 'style.css' );
 
 }
