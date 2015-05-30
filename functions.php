@@ -3,6 +3,14 @@
 /**
 * Dequeue the Emoji script.
 */
+register_nav_menus( 
+    array(
+        'primary'	=>	__( 'Primary Menu', 'naked' ), // Register the Primary menu
+        // Copy and paste the line above right here if you want to make another menu, 
+        // just change the 'primary' to another name
+    )
+);
+
 function disable_emoji_dequeue_script() {
 wp_dequeue_script( 'emoji' );
 }
