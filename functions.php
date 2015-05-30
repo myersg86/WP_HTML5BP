@@ -5,7 +5,7 @@
 */
 register_nav_menus( 
     array(
-        'primary'	=>	__( 'Primary Menu', 'naked' ), // Register the Primary menu
+        'primary'	=>	__( 'Primary Menu', 'wp_html5bp' ), // Register the Primary menu
         // Copy and paste the line above right here if you want to make another menu, 
         // just change the 'primary' to another name
     )
@@ -40,9 +40,6 @@ function wpt_theme_js() {
     wp_enqueue_script( 'jquery_js', get_template_directory_uri() . '/js/vendor/jquery.1.11.2.min.js', '', '', true );
     
 }
-
 add_action ( 'wp_enqueue_scripts', 'wpt_theme_js')
-
-    
     
 ?>
