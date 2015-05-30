@@ -991,7 +991,7 @@ object {
 
 
 /*--------------------------------------------------------------
-## Automatically shrink images to display on smaller screen sizes (if image would normally be cut off)
+## MAX WIDTH ON IMAGES - Automatically shrink images to display on smaller screen sizes (if image would normally be cut off)
 --------------------------------------------------------------*/
 
 img {
@@ -1000,3 +1000,6 @@ img {
     vertical-align: middle;
     border: 0;
 }
+
+/* CLASSES REQUIRED FOR THEME CHECk */
+.sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}
