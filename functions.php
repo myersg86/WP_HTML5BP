@@ -1,16 +1,57 @@
 <?php
 
+add_theme_support( 'menus' );
+
+function register_theme_menus() {
+
+	register_nav_menus(
+		array(
+			'primary-menu' 	=> __( 'Primary Menu', 'Main Menu' )			
+		)
+	);
+
+}
+add_action( 'init', 'register_theme_menus' );
+
+    /* Enable support for Post Thumbnails on posts and pages.
+	 *
+	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 */
+add_theme_support( 'post-thumbnails' );
+
+    /*
+	 * Switch default core markup for search form, comment form, and comments
+	 * to output valid HTML5.
+	 */
+add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	) );
+
+	/*
+	 * Enable support for Post Formats.
+	 * See http://codex.wordpress.org/Post_Formats
+	 */
+	add_theme_support( 'post-formats', array(
+		'aside',
+		'image',
+		'video',
+		'quote',
+		'link',
+	) );
+
+	// Set up the WordPress core custom background feature.
+	add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
+		'default-color' => 'ffffff',
+		'default-image' => '',
+	) ) );
+
 /**
 * Dequeue the Emoji script.
 */
-register_nav_menus( 
-    array(
-        'primary'	=>	__( 'Primary Menu', 'wp_html5bp' ), // Register the Primary menu
-        // Copy and paste the line above right here if you want to make another menu, 
-        // just change the 'primary' to another name
-    )
-);
-
 function disable_emoji_dequeue_script() {
 wp_dequeue_script( 'emoji' );
 }
@@ -24,6 +65,7 @@ remove_action( 'wp_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'admin_print_styles', 'print_emoji_styles');
 remove_action( 'admin_print_scripts','print_emoji_detection_script');
+
 
 function wpt_theme_styles() {
     
