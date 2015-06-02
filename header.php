@@ -16,11 +16,11 @@
 		<div class="site-branding">
 			<h1 class="site-title title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div>
+		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<?php wp_nav_menu( array( 'container' => false, 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class'  => 'no-bullet' ) ); ?>
-		</nav>
-	</header>
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
 
 	<div id="content" class="site-content main-container">
