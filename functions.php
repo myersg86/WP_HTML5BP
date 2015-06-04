@@ -13,11 +13,20 @@ function register_theme_menus() {
 }
 add_action( 'init', 'register_theme_menus' );
 
-    /* Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+add_theme_support( 'automatic-feed-links' );
+
+	/*
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
 	 */
+
+add_theme_support( 'title-tag' );
+    /*
+    * Enable support for Post Thumbnails on posts and pages. */
 add_theme_support( 'post-thumbnails' );
+    /* Enable support for Post Thumbnails on posts and pages.*/
 
     /*
 	 * Switch default core markup for search form, comment form, and comments
